@@ -35,5 +35,16 @@ public void deleteEmployee(Long id)
 }
 
 
+public List<Employee> getEmployeeByName(String name)
+{
+	return employeeRepository.findByName(name);
+	
+}
+
+public List<Employee> getEmployeeByDepartment(String department)
+{
+	return employeeRepository.findByDepartment(department);
+}
+
 
 }

@@ -46,5 +46,18 @@ public void deleteEmployee( @PathVariable  Long id)
 	employeeService.deleteEmployee(id);
 }
 
+@GetMapping("/name/{name}")
+public List<Employee> getEmployeeByName(@PathVariable  String name)
+{
+	return employeeService.getEmployeeByName(name);
+}
+
+@GetMapping("/department/{department}")
+public List<Employee> getEmployeeByDepartment(@PathVariable  String department)
+{
+	return employeeService.getEmployeeByDepartment(department);
+}
+ 
+
 
 }
