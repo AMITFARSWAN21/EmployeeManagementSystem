@@ -8,6 +8,6 @@ import com.management.system.model.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee,Long> {
 
-	List<Employee> findByName(String name);
+	List<Employee> findByNameContainingIgnoreCase(String name);
 	List<Employee> findByDepartment(String department);
 }

@@ -47,13 +47,15 @@ public void deleteEmployee( @PathVariable  Long id)
 }
 
 @GetMapping("/name/{name}")
-public List<Employee> getEmployeeByName(@PathVariable  String name)
+public List<Employee> getEmployeeByName(@PathVariable("name") String name)
+
 {
 	return employeeService.getEmployeeByName(name);
 }
 
 @GetMapping("/department/{department}")
-public List<Employee> getEmployeeByDepartment(@PathVariable  String department)
+public List<Employee> getEmployeeByDepartment(@PathVariable("department") String department)
+
 {
 	return employeeService.getEmployeeByDepartment(department);
 }

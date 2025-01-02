@@ -35,11 +35,10 @@ public void deleteEmployee(Long id)
 }
 
 
-public List<Employee> getEmployeeByName(String name)
-{
-	return employeeRepository.findByName(name);
-	
+public List<Employee> getEmployeeByName(String name) {
+    return employeeRepository.findByNameContainingIgnoreCase(name);
 }
+
 
 public List<Employee> getEmployeeByDepartment(String department)
 {
